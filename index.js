@@ -12,4 +12,13 @@ We will eventually be able to use our app in the following way:
 > node index.js
 Next pass at Fri Jun 01 2021 13:01:35 GMT-0700 (Pacific Daylight Time) for 465 seconds!
 */
-const { issSomething } = require("./iss");
+// const { issSomething } = require("./iss");
+// const { fetchMyIP } = require('./iss');
+
+// fetchMyIP((error, ip) => {
+//   if (error) {
+//     console.log("It didn't work!" , error);
+//     return;
+//   }
+//   console.log('It worked! Returned IP:' , ip);
+// });
