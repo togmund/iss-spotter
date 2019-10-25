@@ -50,8 +50,8 @@ const fetchCoordsByIP = (ip, callback) => {
       callback(Error(msg), null);
       return;
     } else {
-      const data = JSON.parse(body);
-      callback(error, data);
+      const { latitude, longitude } = JSON.parse(body).data;
+      callback(error, { latitude, longitude });
       return;
     }
   });
