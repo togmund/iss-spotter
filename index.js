@@ -46,7 +46,7 @@ const logPassTimes = (passTimes) => {
   for (const pass of passTimes) {
     const datetime = new Date(0);
     datetime.setSeconds(pass.risetime);
-    console.log(`Next pass at ${datetime.toLocaleString("en-US", {timeZone: "America/Los_Angeles"})} for ${Math.floor(pass.duration/60)} minutes!`);
+    console.log(`Next pass at ${datetime.toLocaleString("en-US", {timeZone: "America/Los_Angeles"})} for ${Math.floor(pass.duration / 60)} minutes!`);
   }
 };
 
