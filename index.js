@@ -42,10 +42,18 @@ const { nextISSTimesForMyLocation } = require('./iss');
 //   console.log('It worked! Returned flyovers:' , flyovers);
 // });
 
+const logPassTimes = (passTimes) => {
+  for (const pass of passTimes) {
+    const datetime = new Date(0);
+    datetime.setSeconds(pass.risetime);
+    console.log(`Next pass at ${datetime.toLocaleString("en-US", {timeZone: "America/Los_Angeles"})} for ${Math.floor(pass.duration/60)} minutes!`);
+  }
+};
+
 nextISSTimesForMyLocation((error, passTimes) => {
   if (error) {
     return console.log("It didn't work!", error);
   }
   // success, print out the deets!
-  console.log(passTimes);
+  logPassTimes(passTimes);
 });
