@@ -36,4 +36,4 @@ const nextISSTimesForMyLocation = () => {
 
 // Function Exports //
 
-module.exports = { fetchMyIP, fetchCoordsByIP, fetchISSFlyOverTimes };
+module.exports = { nextISSTimesForMyLocation };
