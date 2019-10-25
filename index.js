@@ -14,6 +14,7 @@ Next pass at Fri Jun 01 2021 13:01:35 GMT-0700 (Pacific Daylight Time) for 465 s
 */
 // const { issSomething } = require("./iss");
 // const { fetchMyIP } = require('./iss');
+const { fetchCoordsByIP } = require('./iss');
 
 // fetchMyIP((error, ip) => {
 //   if (error) {
@@ -22,3 +23,12 @@ Next pass at Fri Jun 01 2021 13:01:35 GMT-0700 (Pacific Daylight Time) for 465 s
 //   }
 //   console.log('It worked! Returned IP:' , ip);
 // });
+
+
+fetchCoordsByIP('162.245.144.188',(error, coords) => {
+  if (error) {
+    console.log("It didn't work!" , error);
+    return;
+  }
+  console.log('It worked! Returned coords:' , coords);
+});
