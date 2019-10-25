@@ -14,7 +14,8 @@ Next pass at Fri Jun 01 2021 13:01:35 GMT-0700 (Pacific Daylight Time) for 465 s
 */
 // const { issSomething } = require("./iss");
 // const { fetchMyIP } = require('./iss');
-const { fetchCoordsByIP } = require('./iss');
+// const { fetchCoordsByIP } = require('./iss');
+const { fetchISSFlyOverTimes } = require('./iss');
 
 // fetchMyIP((error, ip) => {
 //   if (error) {
@@ -25,10 +26,18 @@ const { fetchCoordsByIP } = require('./iss');
 // });
 
 
-fetchCoordsByIP('162.245.144.188',(error, coords) => {
+// fetchCoordsByIP('162.245.144.188',(error, coords) => {
+//   if (error) {
+//     console.log("It didn't work!" , error);
+//     return;
+//   }
+//   console.log('It worked! Returned coords:' , coords);
+// });
+
+fetchISSFlyOverTimes({ latitude: '49.26200', longitude: '-123.09230' }, (error, flyovers) => {
   if (error) {
     console.log("It didn't work!" , error);
     return;
   }
-  console.log('It worked! Returned coords:' , coords);
+  console.log('It worked! Returned flyovers:' , flyovers);
 });
